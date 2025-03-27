@@ -39,7 +39,7 @@ const Dashboard = () => {
     setError(null);
     try {
       const response = await fetch(
-        `https://gnews.io/api/v4/top-headlines?country=in&lang=en&max=9&page=1&apikey=2f65bf07a842878627d8c0af8aaf348f`
+        `https://gnews.io/api/v4/search?q=${category}&apikey=6075533d42e1f4989adb663c0fdd05e8`
       );
       if (!response.ok) throw new Error("Failed to fetch news");
       const data = await response.json();
